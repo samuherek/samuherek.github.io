@@ -36,6 +36,25 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Install goland
+        run: go mod tidy
+
+      - name: Gen templ files
+        run: templ generate
+
+      - name: Install Node.js and Dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: tailwind/package-lock.json
+
+      - name: Tailwind me
+        run: |
+          cd tailwind
+          npm ci
+          npm run build-css-prod
+
       - name: Build static site
         run: go run ./cmd/gen/main.go
 
