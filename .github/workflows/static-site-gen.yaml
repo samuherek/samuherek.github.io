@@ -39,6 +39,9 @@ jobs:
       - name: Install goland
         run: go mod tidy
 
+      - name: Install templ
+        run: go install github.com/a-h/templ/cmd/templ@latest
+
       - name: Gen templ files
         run: templ generate
 
