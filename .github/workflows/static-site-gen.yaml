@@ -73,6 +73,11 @@ jobs:
       url: ${{ steps.deployment.output.page_url }}
     needs: build
     steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v4

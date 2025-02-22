@@ -56,7 +56,10 @@ export default {
       },
     }),
   ],
-  content: ["../views/**/*.{html,js,templ,go}"],
+  content: [
+    "../pages/**/*.{html,js,templ,go}",
+    "../layout/**/*.{html,js,templ,go}",
+  ],
   safelist: [
     {
       pattern: /^uk-/,
