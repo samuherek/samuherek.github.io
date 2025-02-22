@@ -1,0 +1,22 @@
+package pages
+
+import "samuherek/layout"
+
+templ Home() {
+	<div class="h-screen flex items-center justify-center">
+		<div class="w-80">
+			<div class="flex flex-col text-center mb-8">
+				<h1 class="uk-h3 mb-2">Sam Uherek</h1>
+			</div>
+		</div>
+	</div>
+}
+
+templ HomeWrapper(
+	title string,
+	cmp templ.Component,
+) {
+	@layout.Base(title) {
+		@cmp
+	}
+}
