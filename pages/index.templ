@@ -308,9 +308,10 @@ templ Home() {
 
 templ HomeWrapper(
 	title string,
+	hashCss string,
 	cmp templ.Component,
 ) {
-	@layout.Base(title) {
+	@layout.Base(title, hashCss) {
 		@cmp
 	}
 }

@@ -13,11 +13,11 @@ func renderView(c echo.Context, cmp templ.Component) error {
 }
 
 func index(c echo.Context) error {
-	return renderView(c, pages.HomeWrapper("Home", pages.Home()))
+	return renderView(c, pages.HomeWrapper("Home", "main.css", pages.Home()))
 }
 
 func error_404(c echo.Context) error {
-	return renderView(c, pages.Error404Wrapper("Error", pages.Error404()))
+	return renderView(c, pages.Error404Wrapper("Error", "main.css", pages.Error404()))
 }
 
 func main() {

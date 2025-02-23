@@ -27,10 +27,10 @@ templ Error404() {
 }
 
 templ Error404Wrapper(
-	title string,
+	title, hashCss string,
 	cmp templ.Component,
 ) {
-	@layout.Base(title) {
+	@layout.Base(title, hashCss) {
 		@cmp
 	}
 }
