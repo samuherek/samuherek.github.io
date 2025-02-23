@@ -16,10 +16,15 @@ func index(c echo.Context) error {
 	return renderView(c, pages.HomeWrapper("Home", pages.Home()))
 }
 
+func error_404(c echo.Context) error {
+	return renderView(c, pages.Error404Wrapper("Error", pages.Error404()))
+}
+
 func main() {
 	e := echo.New()
 	e.Static("/static", "static")
 
 	e.GET("/", index)
+	e.GET("/404", error_404)
 	e.Logger.Fatal(e.Start(":1323"))
 }
