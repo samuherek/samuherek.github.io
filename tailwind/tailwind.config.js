@@ -6,7 +6,7 @@ export default {
   presets: [
     franken({
       fontFamily: {
-        //DMMono: ["DMMono", ...defaultTheme.fontFamily.sans],
+        DMMono: ["DM Mono", ...defaultTheme.fontFamily.sans],
       },
       customPalette: {
         ".uk-theme-emerald": {

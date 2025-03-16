@@ -8,7 +8,7 @@
     "build-css-prod": "npx tailwindcss -i input.css -o ../static/css/main.css --minify"
   },
   "keywords": [],
-  "author": "emarifer",
+  "author": "samuherek",
   "license": "MIT",
   "devDependencies": {
     "daisyui": "^4.10.2",
